@@ -1,0 +1,5 @@
+xStr = input("Enter a number: ")
+xConv = int(xStr)
+yStr = input("Enter a second number: ")
+yConv = int(yStr)
+print('The sum of ', xConv, ' and ', yConv, ' is ', xConv+yConv, '.', sep='')

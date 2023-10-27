@@ -1,0 +1,126 @@
+# value = int(input("Input something: "))
+# print(value)
+print(3/2)
+print(3//2)
+print(-3/2)
+print(-3//2)
+print("asd")
+result = 1 + 2 + 1 \
+            + 1 #example of multi-line continuation character
+print(result)
+
+def sumofTwo(a,b):
+    return a+b
+
+a=sumofTwo(1,2)
+print(a, end='delimiter', sep='delimiter')
+
+discount = .5
+print(f'{discount:.0%}')
+print(f'{discount:.0%}')
+
+
+num = 1000000.00
+print(f'{num:,.2f}') 
+print(f'{num:.2f}') # for float values
+num = 123456789
+print(f'{num:,d}') # for int values
+print(f'{num:12,d}') # Defining min width for total print element
+
+# Aligning
+print('Aligning')
+print(f'{num:<20.2f}')
+print(f'{num:>20.2f}') 
+print(f'{num:^20.2f}')
+
+#### [alignment][width][,][.precision][type]
+print(f'{num:^10,.2f}')
+
+a = 'asd'
+print(a, a, a)
+
+num = 12345.6789
+print(f'{num:.3e}')
+
+
+import turtle
+num = turtle.numinput('Input', 'Enter a number',
+           default=10, minval=0, maxval=100)
+# turtle.done()   # to keep turtle window open
+
+print('a'>'A')
+print(True & False)
+print(True and False)
+
+sum = 0
+for num in range(10, 0, -3):
+    sum += num
+    print(num, end=',')
+print()
+print(sum)
+
+for num in range(0, 3, 1):
+    for num1 in range(0, 4, 1):
+        print('Hi')
+
+turtle.speed(0)        
+
+for x in range(36):
+    turtle.circle(100)
+    turtle.left(10)
+# turtle.done()
+
+
+def some_function():
+    return 1,2,3
+
+a,b,c = some_function()
+print(a, b, c)
+
+import math
+
+print(math.pi, math.e)
+
+def printFile(trial_fileObj):
+    for line in trial_fileObj:
+        print(line)
+
+
+trial_fileObj = open('./Sem 1/AISC1000 - Python/code/trial_file.txt','a')
+
+# Reading a file
+
+# line = trial_fileObj.readline()
+# while(line != ''):
+#     print(line)
+
+trialRead_fileObj = open('./Sem 1/AISC1000 - Python/code/trial_file.txt','r')
+print(trialRead_fileObj.readline().rstrip('\n'))
+print(trialRead_fileObj.readline())
+print(trialRead_fileObj.read())
+print(trialRead_fileObj.readline())
+print(trialRead_fileObj.readline())
+# printFile(trial_fileObj)
+
+trial_fileObj.write('joel'+'\n')
+# printFile(trial_fileObj)
+trial_fileObj.close()
+print(trialRead_fileObj.read())
+
+
+checkStr = 123
+print(type(str(checkStr)))
+
+
+try:
+    print('a')
+except ArithmeticError:
+    print('b', ArithmeticError.args())
+except:
+    print('b')
+else:
+    print('c')
+    
+
+abc = 123.456789
+print(f'{abc:.3f}')

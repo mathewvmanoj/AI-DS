@@ -1,0 +1,6 @@
+instructor = input("Enter the prof's name: ")
+subject = input("Enter the subject name: ")
+term = input("Enter the term: ")
+#print(instructor, "will teach", subject, "in", term)
+#print(instructor, "will teach", subject, "in", term, sep='')
+print ('{1}will be taught by {0}in{2}'.format (instructor, subject, term))

@@ -1,0 +1,47 @@
+import numpy as np
+from scipy.optimize import linprog
+
+A = np.array([[0.3, 0.3, 0.1, 0.15, 0.5], 
+              [0, 0, 1.5, 2.5, 0], 
+              [-4, 0, 1, 0, 0],
+              [0, -4, 0, 1, 0],
+              [1, 1, 0, 0, -1],
+              [0, 0, 0, 0, 1], 
+              [0, 0, 0, 1, 0], 
+              [0, 0, 1, 0, 0],
+              [0, 1, 0, 0, 0],
+              [1, 0, 0, 0, 0]])
+A
+
+b = np.array([80, 500, 0, 0, 0, 0, 0, 0, 0, 0])
+b
+
+c = np.array([30, 45, 0, 0, 0])
+
+res = linprog(c, A_ub=A, b_ub=b)
+
+
+------------------------------------------------
+
+import numpy as np
+from scipy.optimize import linprog
+
+A = np.array([[0.3, 0.3, 0.1, 0.15, 0.5], 
+              [0, 0, 1.5, 2.5, 0], 
+              [-4, 0, 1, 0, 0],
+              [0, -4, 0, 1, 0],
+              [1, 1, 0, 0, -1]])
+A
+
+b = np.array([80, 500, 0, 0, 0])
+b
+
+c = np.array([30, 45, 0, 0, 0])
+
+res = linprog(c, A_ub=A, b_ub=b)
+res
+
+print('Optimal value:', round(res.fun, ndigits=2),
+      '\nx values:', res.x,
+      '\nNumber of iterations performed:', res.nit,
+      '\nStatus:', res.message)
